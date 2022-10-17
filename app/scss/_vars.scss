@@ -1,0 +1,32 @@
+$color-first: #2C2C2C;
+$color-second: #545454;
+$color-decor: #2D415E;
+$color-bg: #F8F8F8;
+$color-accent: #FFCC2A;
+
+%menu-font{
+	font-family: 'Open Sans', sans-serif;
+	font-style: normal;
+	font-weight: 400;
+	font-size: 14px;
+	line-height: 19px;
+	color: $color-first;
+}
+
+%base-font{
+	font-family: 'Open Sans', sans-serif;
+	font-style: normal;
+	font-weight: 400;
+	font-size: 16px;
+	line-height: 29px;
+	color: $color-second;
+}
+
+%title-font{
+	font-family: 'Georgia';
+	font-style: normal;
+	font-weight: 400;
+	font-size: 48px;
+	line-height: 64px;
+	color: $color-first;
+}
