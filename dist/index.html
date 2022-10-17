@@ -4,7 +4,7 @@
 		<meta charset="UTF-8">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<title>Document</title>
+		<title>Artemis</title>
 		<link rel="stylesheet" href="css/style.min.css">
 </head>
 <body>
@@ -42,6 +42,11 @@
 								<li class="menu__list-item"><a class="menu__list-link" href="#">Contact Us</a></li>
 								<li class="menu__list-item"><a class="menu__list-link" href="#">Podcast</a></li>
 							</ul>
+							<div class="search hidden-desctop">
+								<form class="search__form" role="search" action="/">
+										<input class="search__form-field" type="search" id="search" placeholder="Search" name="q">
+								</form>
+							</div>
 						</nav>
 						<div class="header__buttons">
 							<button class="button-link language">
@@ -51,7 +56,14 @@
 									<li class="menu__list-submenu-item"><a class="menu__list-submenu-link" href="#">German</a></li>
 								</ul> 
 							</button>
-							<button class="button-link"><img class="search-icon" src="img/header/search.svg" alt="Search"></button>
+							<button class="button-link search">
+								<img class="search__form-icon" src="img/header/search.svg" alt="Search">
+								<form class="search__form" role="search" action="/">
+									<label for="search">
+										<input class="search__form-field" type="search" id="search" placeholder="Search" name="q">
+									</label>
+								</form>
+							</button>
 						</div>
 				</div>
 			</div>
@@ -72,7 +84,7 @@
 						</div>
 					</div>
 				</div>
-				<img class="intro__image hidden-desctop" src="/img/mobile/section-intro-img-mobile.png" alt="" >
+				<img class="intro__image hidden-desctop" src="/img/main/section-intro-img.svg" alt="" >
 			</section>
 
 			<section class="stat">
@@ -194,7 +206,7 @@
 							<form class="form__right-form" action="/">
 								<input class="form__right-input" type="text" name="name" placeholder="Name">
 								<input class="form__right-input" type="text" name="mail" placeholder="Email">
-								<textarea class="form__right-textarea" name="textarea" placeholder="Email"></textarea>
+								<textarea class="form__right-textarea" name="textarea" placeholder="Message"></textarea>
 								<input class="button button_accent form__right-submit" type="submit" value="Submit">
 							</form>
 							<div class="form__right-bottom hidden-desctop"></div>
