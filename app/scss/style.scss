@@ -52,6 +52,30 @@
 	}
 }
 
+
+.search{
+	padding-left: 30px;
+	position: relative;
+
+	&__form{
+		display: none;
+		position: absolute;
+		background-color: #fff;
+		top: -17px;
+		right: 35px;
+		-webkit-box-shadow: 0px 10px 8px rgba(0,0,0,.08);
+		box-shadow: 0px 10px 8px rgba(0,0,0,.08);
+	}
+	&:hover &__form{
+		display: block;
+	}
+	&__form-field{
+		padding: 10px 20px;
+		width: 300px;
+	}
+}
+
+
 .footer{
 	background-color: $color-bg;
 	padding-top: 60px;
@@ -296,8 +320,8 @@
 	}
 	&__item-btn-play{
 		position: absolute;
-		top: calc((273px / 2) - 30px);
-		left: calc((310px / 2) - 30px);
+		top: calc((100% / 2) - 30px);
+		left: calc((100% / 2) - 30px);
 		background: transparent;
 		cursor: pointer;
 	}
@@ -461,7 +485,75 @@
 	}
 }
 
-@media only screen and (max-width: 375px){
+@media only screen and (max-width: 1200px){
+
+	.intro{
+		background-size: 60%;
+	}
+	.form{
+		&__left::after, &__right::after{
+			display: none;
+		}
+
+	}
+	.stat{
+		padding-top: 90px;
+		&__content:first-child::after{
+			display: none;
+		}
+	}
+}
+
+@media only screen and (max-width: 1070px){
+
+	.form{
+		&__right::before{
+			display: none;
+		}
+	}
+	.stat{
+		&__content:first-child {
+			margin-left: 30px;
+		}
+		&__content:last-child {
+			margin-right: 300px;
+		}
+	}
+	.funding__image {
+		max-width: 50%;
+	}
+	.services__image{
+		max-width: 50%;
+	}
+}
+
+@media only screen and (max-width: 992px){
+
+	.stat{
+		&__content:first-child{
+			margin-left: 10px;
+		}
+		&__content-title {
+			font-size: 14px;
+		}
+		&__content-info {
+			font-size: 57px;
+		}
+		&__content:last-child{
+			margin-right: 350px;
+		}
+		&__content-image{
+			right: -70px;
+		}
+	}
+	.form{
+		&__left::before{
+			display: none;
+		}
+	}
+}
+
+@media only screen and (max-width: 768px){
 
 	.hidden-mobile{
 		display: none;
@@ -540,10 +632,31 @@
 		}
 	}
 
+	.search{
+		padding-left: 0;
+		margin-top: 30px;
+		&__form{
+			display: block;
+			position: relative;
+			background-color: #fff;
+			top: 0px;
+			right: 0;
+			-webkit-box-shadow: 0px -2px 0px rgba(0,0,0,.08);
+			box-shadow: 0px -2px 0px rgba(0,0,0,.08);
+		}
+		&__form-field{
+			padding: 10px 20px;
+			width: 100%;
+		}
+	}
+
 	.intro{
 		padding: 60px 0 0 0;
 		background-image: none;
 		background-color: $color-bg;
+		&__inner {
+			max-width: 100%;
+		}
 		&__title{
 			font-size: 39px;
 			line-height: 45px;
@@ -553,8 +666,16 @@
 			padding: 20px 0 25px 0;
 			text-align: center;
 		}
+		&__buttons{
+			margin: 0 auto;
+			width: 215px;
+		}
 		&__button{
 			margin: 24px auto;
+		}
+		&__image{
+			max-width: 115%;
+			margin-left: -15%;
 		}
 	}
 
@@ -562,24 +683,21 @@
 		padding-top: 24px;
 		&__inner{
 			flex-direction: column;
-			align-items: flex-start;
+			align-items: center;
 			padding: 64px 0 17px 0;
 			background-image: url('../img/mobile/section-stat-deer-mobile.svg');
 			background-repeat: no-repeat;
 			background-position: left 15%;
 		}
 		&__content{
-			overflow: hidden;
+			width: 185px;
+			text-align: left;
 		}
 		&__content:first-child {
 			margin-left: inherit;
 		}
 		&__content:first-child::before{
 			display: none;
-		}
-		&__content-title,
-		&__content-info{
-			padding-left: 77px;
 		}
 		&__content-info{
 			margin-bottom: 15px;
@@ -592,7 +710,8 @@
 			background-image: none;
 			scale: 1.1;
 		}
-		&__content:last-child {
+		&__content:last-child{
+			width: auto;
 			margin-right: inherit;
 			padding-bottom: 17px;
 		}
@@ -611,13 +730,14 @@
 		padding: 37px 0;
 		&__inner{
 			flex-direction: column;
+			text-align: center;
 		}
 		&__title{
 			font-size: 26px;
 			line-height: 30px;
 		}
 		&__text{
-			padding: 10px 0 20px;
+			padding: 10px 0 40px;
 		}
 		&__image {
 			max-width: 100%;
@@ -629,6 +749,7 @@
 		padding: 40px 0;
 		&__inner{
 			flex-direction: column-reverse;
+			text-align: center;
 		}
 		&__title{
 			font-size: 26px;
@@ -640,7 +761,7 @@
 		&__image{
 			max-width: 100%;
 			padding-right: inherit;
-			margin-bottom: 33px;
+			margin-bottom: 55px;
 		}
 	}
 
@@ -664,13 +785,48 @@
 		&__item-video{
 			margin-bottom: 10px;
 		}
-		&__item-btn-play{
-			top: calc((273px / 2) - 40px);
-			left: calc((310px / 2) - 40px);
-		}
 	}
 	.slick-list{
 		padding: 0 60px 0 0;
+	}
+
+	.footer{
+		&__inner{
+			flex-direction: column;
+		}
+		&__title{
+			margin-top: 40px;
+		}
+		&__menu-item, &__services-item{
+			display: inline-block;
+		}
+		&__menu-link, &__services-link{
+			padding-right: 24px;
+		}
+		&__social-list{
+			margin-top: 40px;
+		}
+		&__social-link::before{
+			width: 33px;
+			height: 33px;
+		}
+		&__social-link_youtube::before{background-image: url("../img/mobile/youtube-mobile.png");}
+		&__social-link_linkedin::before{background-image: url("../img/mobile/linkedin-mobile.png");}
+		&__social-link_facebook::before{background-image: url("../img/mobile/facebook-mobile.png");}
+		&__social-link_instagram::before{background-image: url("../img/mobile/instagram-mobile.png");}
+	}
+
+}
+
+@media only screen and (max-width: 640px){
+
+	.funding__inner, .services__inner{
+		text-align: left;
+	}
+	.stat {
+		&__content {
+			width: 165px;
+		}
 	}
 	.form{
 		padding: 40px 0 0px 0;
@@ -679,17 +835,20 @@
 		}
 		&__title {
 			text-align: left;
-			max-width: 290px;
+			max-width: 295px;
 			font-size: 40px;
 			line-height: 45px;
 			margin: 0 0 40px 0;
 		}
 		&__left{
-			width: 375px;
+			width: calc(100% + 30px);
+			min-width: auto;
 			margin-left: -15px;
 			border-radius: 0;
 			background-color: #2C405F;
 			background-image: url("../img/mobile/section-form-mask-mobile.svg");
+			background-size: 100%;
+			overflow: hidden;
 		}
 		&__left::before, &__left::after,
 		&__right::before, &__right::after{
@@ -730,30 +889,14 @@
 		}
 	}
 
-	.footer{
-		&__inner{
-			flex-direction: column;
+}
+
+@media only screen and (max-width: 480px){
+
+	.stat{
+		&__content{
+			overflow: hidden;
 		}
-		&__title{
-			margin-top: 40px;
-		}
-		&__menu-item, &__services-item{
-			display: inline-block;
-		}
-		&__menu-link, &__services-link{
-			padding-right: 24px;
-		}
-		&__social-list{
-			margin-top: 40px;
-		}
-		&__social-link::before{
-			width: 33px;
-			height: 33px;
-		}
-		&__social-link_youtube::before{background-image: url("../img/mobile/youtube-mobile.png");}
-		&__social-link_linkedin::before{background-image: url("../img/mobile/linkedin-mobile.png");}
-		&__social-link_facebook::before{background-image: url("../img/mobile/facebook-mobile.png");}
-		&__social-link_instagram::before{background-image: url("../img/mobile/instagram-mobile.png");}
 	}
 
 }

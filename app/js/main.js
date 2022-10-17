@@ -7,6 +7,14 @@ $(function(){
 		nextArrow:"<button type='button' class='slick-next pull-right'></button>",
 		responsive: [
 			{
+				breakpoint: 769,
+				settings: {
+					slidesToShow: 2,
+					slidesToScroll: 1,
+					arrows: false,
+				}
+			},
+			{
 				breakpoint: 400,
 				settings: {
 					slidesToShow: 1,
