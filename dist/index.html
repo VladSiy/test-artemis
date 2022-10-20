@@ -14,16 +14,11 @@
 			<div class="container">
 				<div class="header__inner">
 					<a class="logo" href="/"><img src="img/logo.png" alt=""></a>
-						<input class="hidden-desctop" type="checkbox" id="hamburger">
-						<label for="hamburger">
-							<span></span>
-							<span></span>
-							<span></span>
-						</label>
+						<button class="hidden-desctop" id="menu_mobile_btn"></button>
 						<nav class="menu">
 							<ul class="menu__list">
 								<li class="menu__list-item menu__list-item-has-children">
-									<a class="menu__list-link menu__list-link_active" href="#">Services<i class="arrow_down"></i></a>
+									<a class="menu__list-link menu__list-link_active" href="#">Services</a><i class="arrow_down"></i>
 									<ul class="menu__list-submenu-list">
 										<li class="menu__list-submenu-item"><a class="menu__list-submenu-link" href="#">Item</a></li>
 										<li class="menu__list-submenu-item"><a class="menu__list-submenu-link" href="#">Item 2</a></li>
@@ -32,7 +27,7 @@
 								</li>
 								<li class="menu__list-item"><a class="menu__list-link" href="#">About Us</a></li>
 								<li class="menu__list-item menu__list-item-has-children">
-									<a class="menu__list-link" href="#">Blog<i class="arrow_down"></i></a>
+									<a class="menu__list-link" href="#">Blog</a><i class="arrow_down"></i>
 									<ul class="menu__list-submenu-list">
 										<li class="menu__list-submenu-item"><a class="menu__list-submenu-link" href="#">Item</a></li>
 										<li class="menu__list-submenu-item"><a class="menu__list-submenu-link" href="#">Item 2 Item 2 Item 2</a></li>
@@ -144,7 +139,7 @@
 					<div class="slider__inner">
 
 							<div class="slider__item">
-								<div class="slider__item-video">
+								<div class="slider__item-video" data-video-id="7X8II6J-6mU">
 									<img class="slider__item-img" src="img/main/slider/video_1.png" alt="">
 									<button class="slider__item-btn-play"><img class="slider__item-icon-play" src="img/main/slider/section-slider-icon-play.svg" alt=""></button>
 								</div>
@@ -153,7 +148,7 @@
 								</div>
 							</div>
 							<div class="slider__item">
-								<div class="slider__item-video">
+								<div class="slider__item-video" data-video-id="5Peo-ivmupE">
 									<img class="slider__item-img" src="img/main/slider/video_2.png" alt="">
 									<button class="slider__item-btn-play"><img class="slider__item-icon-play" src="img/main/slider/section-slider-icon-play.svg" alt=""></button>
 								</div>
@@ -162,7 +157,7 @@
 								</div>
 							</div>
 							<div class="slider__item">
-								<div class="slider__item-video">
+								<div class="slider__item-video" data-video-id="7X8II6J-6mU">
 									<img class="slider__item-img" src="img/main/slider/video_3.png" alt="">
 									<button class="slider__item-btn-play"><img class="slider__item-icon-play" src="img/main/slider/section-slider-icon-play.svg" alt=""></button>
 								</div>
@@ -172,7 +167,7 @@
 							</div>
 
 							<div class="slider__item">
-								<div class="slider__item-video">
+								<div class="slider__item-video" data-video-id="5Peo-ivmupE">
 									<img class="slider__item-img" src="img/main/slider/video_3.png" alt="">
 									<button class="slider__item-btn-play"><img class="slider__item-icon-play" src="img/main/slider/section-slider-icon-play.svg" alt=""></button>
 								</div>
@@ -191,21 +186,21 @@
 						<div class="form__left">
 							<h3 class="form__left-title">General Inquiries</h3>
 							<ul class="form__left-list">
-								<li class="form__left-item"><a class="form__left-link form__left-link_phone" href="#">+62-858-9444-2405</a></li>
-								<li class="form__left-item"><a class="form__left-link form__left-link_mail" href="#">contact@artemis.im</a></li>
-								<li class="form__left-item"><a class="form__left-link" href="#">simon@artemis.im</a></li>
+								<li class="form__left-item"><a class="form__left-link form__left-link_phone" href="tel:+6285894442405">+62-858-9444-2405</a></li>
+								<li class="form__left-item"><a class="form__left-link form__left-link_mail" href="mailto:contact@artemis.im">contact@artemis.im</a></li>
+								<li class="form__left-item"><a class="form__left-link" href="mailto:simon@artemis.im">simon@artemis.im</a></li>
 							</ul>
 							<h3 class="form__left-title form__left-title_divider">Media & Press</h3>
 							<ul class="form__left-list">
-								<li class="form__left-item"><a class="form__left-link form__left-link_phone" href="#">+62 812-8337-4974</a></li>
-								<li class="form__left-item"><a class="form__left-link form__left-link_mail" href="#">contact@artemis.im</a></li>
+								<li class="form__left-item"><a class="form__left-link form__left-link_phone" href="tel:+6281283374974">+62 812-8337-4974</a></li>
+								<li class="form__left-item"><a class="form__left-link form__left-link_mail" href="mailto:contact@artemis.im">contact@artemis.im</a></li>
 							</ul>
 						</div>
 						<div class="form__right">
 							<h3 class="form__right-title">Get in touch</h3>
 							<form class="form__right-form" action="/">
 								<input class="form__right-input" type="text" name="name" placeholder="Name">
-								<input class="form__right-input" type="text" name="mail" placeholder="Email">
+								<input class="form__right-input" type="email" name="mail" placeholder="Email">
 								<textarea class="form__right-textarea" name="textarea" placeholder="Message"></textarea>
 								<input class="button button_accent form__right-submit" type="submit" value="Submit">
 							</form>

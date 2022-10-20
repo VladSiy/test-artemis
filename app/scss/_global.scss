@@ -1,6 +1,7 @@
 html,
 body {
 	height: 100%;
+	min-width: 320px;
 	@extend %base-font;
 }
 
@@ -12,6 +13,9 @@ body {
 
 .main {
 	flex: 1 0 auto;
+}
+section{
+	overflow: hidden;
 }
 .footer {
 	flex: 0 0 auto;
@@ -67,6 +71,9 @@ body {
 	line-height: 19px;
 	font-weight: 600;
 	text-align: left;
+}
+.language .arrow_down {
+	right: -14px;
 }
 
 .search-icon{
