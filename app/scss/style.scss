@@ -46,6 +46,9 @@
 		display: block;
 		padding: 10px 0 10px 10px;
 	}
+	&__list-link:hover, &__list-submenu-link:hover{
+		color: $color-accent;
+	}
 }
 
 
