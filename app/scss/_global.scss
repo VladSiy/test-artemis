@@ -43,11 +43,18 @@ body {
 	border: 1px solid transparent;
 	cursor: pointer;
 }
+.button:hover{
+	background: transparent;
+	border: 1px solid $color-accent;
+}
 
 .button-link{
 	background: transparent;
 	border: none;
 	cursor: pointer;
+}
+.button-link:hover{
+	color: $color-accent;
 }
 
 .language{
