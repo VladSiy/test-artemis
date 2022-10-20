@@ -26,15 +26,11 @@
 	}
 	&__list-link{
 		@extend %menu-font;
-		padding-right: 36px;
+		margin-right: 36px;
 	}
 	&__list-link_active{
 		color: $color-decor;
 		font-weight: 600;
-	}
-	&__list-item:hover &__list-submenu-list, .language:hover &__list-submenu-list{
-		display:inherit;
-		padding-bottom: 10px;
 	}
 	&__list-submenu-list{
 		display: none;
@@ -568,16 +564,22 @@
 	}
 }
 
-@media only screen and (max-width: 768px){
+@media only screen and (min-width: 769px){
+	.menu{
+		&__list-item:hover &__list-submenu-list, .language:hover &__list-submenu-list{
+			display: inherit;
+			padding-bottom: 10px;
+		}
+	}
+}
 
+@media only screen and (max-width: 768px){
 	.hidden-mobile{
 		display: none;
 	}
-	
 	.hidden-desctop{
 		display: block;
 	}
-
 	.button{
 		margin: 0 auto;
 		display: block;
@@ -588,44 +590,22 @@
 	.logo{
 		width: 115px;
 	}
-
-	#hamburger{
-		display: none;
-	}
-	
-	label{
+	#menu_mobile_btn{
 		width: 34px;
 		height: 34px;
-		padding-top: 13px;
+		background-image: url('../img/mobile_burger.svg');
 		border-radius: 50%;
-		background: $color-accent;
 		cursor: pointer;
 	}
-	
-	label span{
-		width: 14px;
-		height: 1px;
-		display: block;
-		margin: 0 auto 2.5px auto;
-		background: $color-first;
-	}
-
-	#hamburger:checked ~ .menu{
-		opacity: 1;
-		visibility: visible;
-	}
-	
 	.menu{
+		display: none;
 		position: absolute;
 		top: 85px;
 		left: 0;
 		right: 0;
 		background-color: #fff;
 		box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-		opacity: 0;
-		visibility: hidden;
 		transition: 0.2s;
-
 		&__list{
 			flex-direction: column;
 		}
@@ -644,6 +624,13 @@
 			top: auto;
 			left: auto;
 			box-shadow: none;
+		}
+		&__active{
+			display: block;
+		}
+		.arrow_down {
+			padding: 6px;
+			z-index: 1;
 		}
 	}
 
